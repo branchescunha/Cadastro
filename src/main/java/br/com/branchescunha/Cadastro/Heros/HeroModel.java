@@ -2,11 +2,17 @@ package br.com.branchescunha.Cadastro.Heros;
 
 import br.com.branchescunha.Cadastro.Missions.MissionsModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 // Entity --> Turns a class into a database entity
 // JPA --> Java Persistence API
 @Entity
 @Table(name = "tb_cadastro")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class HeroModel {
 
     @Id
@@ -19,36 +25,4 @@ public class HeroModel {
     @JoinColumn(name = "missions_id") // FK --> Foreign Key
     private MissionsModel missions;
 
-    public HeroModel() {
-    }
-
-    public HeroModel(String name, String email, int age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
