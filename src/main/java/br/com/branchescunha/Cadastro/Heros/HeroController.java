@@ -1,4 +1,4 @@
-package br.com.branchescunha.Cadastro;
+package br.com.branchescunha.Cadastro.Heros;
 
 import org.springframework.web.bind.annotation.*;
 

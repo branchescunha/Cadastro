@@ -1,5 +1,6 @@
-package br.com.branchescunha.Cadastro;
+package br.com.branchescunha.Cadastro.Heros;
 
+import br.com.branchescunha.Cadastro.Missions.MissionsModel;
 import jakarta.persistence.*;
 
 // Entity --> Turns a class into a database entity
@@ -14,6 +15,9 @@ public class HeroModel {
     private String name;
     private String email;
     private int age;
+    @ManyToOne // A hero has a single mission
+    @JoinColumn(name = "missions_id") // FK --> Foreign Key
+    private MissionsModel missions;
 
     public HeroModel() {
     }
