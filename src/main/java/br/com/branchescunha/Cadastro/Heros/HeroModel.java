@@ -19,6 +19,7 @@ public class HeroModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     private String name;
+    @Column(unique = true)
     private String email;
     private int age;
     @ManyToOne // A hero has a single mission
