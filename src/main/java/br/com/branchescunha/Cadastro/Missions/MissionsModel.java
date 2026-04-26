@@ -1,6 +1,6 @@
 package br.com.branchescunha.Cadastro.Missions;
 
-import br.com.branchescunha.Cadastro.Heros.HeroModel;
+import br.com.branchescunha.Cadastro.Heroes.HeroModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,8 +19,8 @@ public class MissionsModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String dificult;
-    @OneToMany(mappedBy = "missions") // A mission can have multiple heros
-    private List<HeroModel> heros;
+    private String difficult;
+    @OneToMany(mappedBy = "missions") // A mission can have multiple heroes
+    private List<HeroModel> heroes;
 
 }
